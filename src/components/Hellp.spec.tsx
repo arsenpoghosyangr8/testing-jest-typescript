@@ -12,6 +12,7 @@ describe('Hello', () => {
         //     expect(screen.getByText('Visible Example')).toBeVisible()
 
         render(<Hello/>)
-        // expect(5 + 5).toBe(10)
+        const myElement = screen.getAllByText(/Hello world/)[0];
+        expect(myElement).toBeInTheDocument();
     })
 })
